@@ -1,0 +1,155 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/09/2017, 01:32:10 PM
+    Author     : alumnog
+*/
+
+div#formulario{
+    width: 60%;
+    height: auto;
+    
+    padding: 10px;
+    margin-left: 10%;
+    
+    background: #eee;    
+    box-sizing: border-box;
+}
+
+div#formulario table{
+    width: 100%;
+}
+
+div#formulario table tr{
+    width: 100%;
+}
+
+div#formulario table tr td{
+    font-family: sans-serif;
+    font-size: 0.8em;
+    color: #555;
+    font-weight: bold;
+    padding-bottom: 8px;
+    width: 50%;
+}
+
+div#formulario table tr td input[type=text]{
+    width: 90%;
+    border: 1px solid #eee;
+    padding: 5px;
+}
+
+div#formulario table tr td input[type=email]{
+    width: 90%;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+div#formulario table tr td textarea{
+    width: 90%;
+    height: 80px;
+    padding: 5px;
+    border: 1px solid #eee;
+}
+
+div#formulario table tr td input[type=submit]{
+    width: 40%;
+    border: 1px solid #0099CC;
+    background: #0099CC;
+    font-family: sans-serif;
+    font-size: 0.8em;
+    font-weight: bold;
+    color:white;
+    
+    padding-top: 5px;
+    padding-bottom: 5px;
+    
+    float: right;
+    
+    margin-right: calc(10% - 5px - 5px);
+}
+
+div#redesSociales{
+    width: 20%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+div#redesSociales h4{
+    font-family: sans-serif;
+    font-size: 0.9em;
+    color:#555;
+    font-weight: bold;
+}
+
+div#redesSociales h6{
+    font-family: sans-serif;
+    font-size: 0.7em;
+    color:#555;
+    font-weight: bold;
+    margin: 0;
+}
+
+div#redesSociales p{
+    font-family: sans-serif;
+    font-size: 0.7em;
+    color:#555;
+    font-weight: lighter;
+    margin: 0px 0px 10px 0px;
+}
+
+div#redesSociales a{
+    font-family: sans-serif;
+    font-size: 0.7em;
+    color:#0099CC;
+    font-weight: lighter;
+    margin: 0px 0px 10px 0px;
+    
+    text-decoration: none;
+    
+}
+
+div#redesSociales div#botonSocial{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+div#redesSociales div#botonSocial a{
+    width: 40px;
+    height: 40px;
+    background: #006699;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+div#redesSociales div#botonSocial a:nth-child(2){
+    background: #00AAFF;
+}
+
+div#redesSociales div#botonSocial a:nth-child(3){
+    background: rgba(200,0,0,1);
+}
+
+div#redesSociales div#botonSocial a:nth-child(4){
+    background: #FF0085;
+}
+
+footer{
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: #6495ed;
+}

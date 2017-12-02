@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NordsonModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="almacen">
+    <Key>
+      <PropertyRef Name="idComponente" />
+    </Key>
+    <Property Name="idComponente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="categoria" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="cantidad" Type="Int32" />
+    <NavigationProperty Name="orden" Relationship="Self.orden_fkAlmacen" FromRole="almacen" ToRole="orden" />
+  </EntityType>
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="idClientes" />
+    </Key>
+    <Property Name="idClientes" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="numeroEmpleado" Type="Int32" />
+    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cargo" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="turno" Type="Int32" />
+    <NavigationProperty Name="orden" Relationship="Self.orden_fkClientes" FromRole="clientes" ToRole="orden" />
+    <Property Name="contrasena" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="orden">
+    <Key>
+      <PropertyRef Name="idOrden" />
+    </Key>
+    <Property Name="idOrden" Type="Int32" Nullable="false" />
+    <Property Name="horaInicio" Type="DateTime" Precision="0" />
+    <Property Name="horaFin" Type="DateTime" Precision="0" />
+    <Property Name="notas" Type="String" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="idCliente" Type="Int32" />
+    <Property Name="idUsuarios" Type="Int32" />
+    <Property Name="idComponente" Type="Int32" />
+    <NavigationProperty Name="almacen" Relationship="Self.orden_fkAlmacen" FromRole="orden" ToRole="almacen" />
+    <NavigationProperty Name="clientes" Relationship="Self.orden_fkClientes" FromRole="orden" ToRole="clientes" />
+    <NavigationProperty Name="usuarios" Relationship="Self.orden_fkUsuarios" FromRole="orden" ToRole="usuarios" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="numeroEmpleado" Type="Int32" />
+    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="cargo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="turno" Type="Int32" />
+    <NavigationProperty Name="orden" Relationship="Self.orden_fkUsuarios" FromRole="usuarios" ToRole="orden" />
+    <Property Name="contrasena" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="orden_fkAlmacen">
+    <End Role="almacen" Type="Self.almacen" Multiplicity="0..1" />
+    <End Role="orden" Type="Self.orden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacen">
+        <PropertyRef Name="idComponente" />
+      </Principal>
+      <Dependent Role="orden">
+        <PropertyRef Name="idComponente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="orden_fkClientes">
+    <End Role="clientes" Type="Self.clientes" Multiplicity="0..1" />
+    <End Role="orden" Type="Self.orden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="idClientes" />
+      </Principal>
+      <Dependent Role="orden">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="orden_fkUsuarios">
+    <End Role="usuarios" Type="Self.usuarios" Multiplicity="0..1" />
+    <End Role="orden" Type="Self.orden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="orden">
+        <PropertyRef Name="idUsuarios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NordsonEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="almacen" EntityType="Self.almacen" />
+    <EntitySet Name="clientes" EntityType="Self.clientes" />
+    <EntitySet Name="orden" EntityType="Self.orden" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+    <AssociationSet Name="orden_fkAlmacen" Association="Self.orden_fkAlmacen">
+      <End Role="almacen" EntitySet="almacen" />
+      <End Role="orden" EntitySet="orden" />
+    </AssociationSet>
+    <AssociationSet Name="orden_fkClientes" Association="Self.orden_fkClientes">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="orden" EntitySet="orden" />
+    </AssociationSet>
+    <AssociationSet Name="orden_fkUsuarios" Association="Self.orden_fkUsuarios">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="orden" EntitySet="orden" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bf0a65fd04ee46f3937fc01e4166b2fd" Name="Diagram1">
+        <EntityTypeShape EntityType="NordsonModel.almacen" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NordsonModel.clientes" Width="1.5" PointX="0.625" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NordsonModel.orden" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NordsonModel.usuarios" Width="1.5" PointX="2.5" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="NordsonModel.orden_fkAlmacen" ManuallyRouted="false" />
+        <AssociationConnector Association="NordsonModel.orden_fkClientes" ManuallyRouted="false" />
+        <AssociationConnector Association="NordsonModel.orden_fkUsuarios" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

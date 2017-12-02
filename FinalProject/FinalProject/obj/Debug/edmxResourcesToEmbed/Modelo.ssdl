@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NordsonModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="almacen">
+    <Key>
+      <PropertyRef Name="idComponente" />
+    </Key>
+    <Property Name="idComponente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
+    <Property Name="categoria" Type="nvarchar" MaxLength="45" />
+    <Property Name="cantidad" Type="int" />
+  </EntityType>
+  <EntityType Name="clientes">
+    <Key>
+      <PropertyRef Name="idClientes" />
+    </Key>
+    <Property Name="idClientes" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numeroEmpleado" Type="int" />
+    <Property Name="nombre" Type="nvarchar(max)" />
+    <Property Name="cargo" Type="nvarchar" MaxLength="45" />
+    <Property Name="turno" Type="int" />
+    <Property Name="contrasena" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="orden">
+    <Key>
+      <PropertyRef Name="idOrden" />
+    </Key>
+    <Property Name="idOrden" Type="int" Nullable="false" />
+    <Property Name="horaInicio" Type="date" />
+    <Property Name="horaFin" Type="date" />
+    <Property Name="notas" Type="nvarchar" MaxLength="45" />
+    <Property Name="idCliente" Type="int" />
+    <Property Name="idUsuarios" Type="int" />
+    <Property Name="idComponente" Type="int" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+    </Key>
+    <Property Name="idUsuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numeroEmpleado" Type="int" />
+    <Property Name="nombre" Type="nvarchar(max)" />
+    <Property Name="cargo" Type="nvarchar(max)" />
+    <Property Name="turno" Type="int" />
+    <Property Name="contrasena" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="orden$fkAlmacen">
+    <End Role="almacen" Type="Self.almacen" Multiplicity="0..1" />
+    <End Role="orden" Type="Self.orden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="almacen">
+        <PropertyRef Name="idComponente" />
+      </Principal>
+      <Dependent Role="orden">
+        <PropertyRef Name="idComponente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="orden$fkClientes">
+    <End Role="clientes" Type="Self.clientes" Multiplicity="0..1" />
+    <End Role="orden" Type="Self.orden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="clientes">
+        <PropertyRef Name="idClientes" />
+      </Principal>
+      <Dependent Role="orden">
+        <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="orden$fkUsuarios">
+    <End Role="usuarios" Type="Self.usuarios" Multiplicity="0..1" />
+    <End Role="orden" Type="Self.orden" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuarios">
+        <PropertyRef Name="idUsuario" />
+      </Principal>
+      <Dependent Role="orden">
+        <PropertyRef Name="idUsuarios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="NordsonModelStoreContainer">
+    <EntitySet Name="almacen" EntityType="Self.almacen" Schema="mydb" store:Type="Tables" />
+    <EntitySet Name="clientes" EntityType="Self.clientes" Schema="mydb" store:Type="Tables" />
+    <EntitySet Name="orden" EntityType="Self.orden" Schema="mydb" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="mydb" store:Type="Tables" />
+    <AssociationSet Name="orden$fkAlmacen" Association="Self.orden$fkAlmacen">
+      <End Role="almacen" EntitySet="almacen" />
+      <End Role="orden" EntitySet="orden" />
+    </AssociationSet>
+    <AssociationSet Name="orden$fkClientes" Association="Self.orden$fkClientes">
+      <End Role="clientes" EntitySet="clientes" />
+      <End Role="orden" EntitySet="orden" />
+    </AssociationSet>
+    <AssociationSet Name="orden$fkUsuarios" Association="Self.orden$fkUsuarios">
+      <End Role="usuarios" EntitySet="usuarios" />
+      <End Role="orden" EntitySet="orden" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

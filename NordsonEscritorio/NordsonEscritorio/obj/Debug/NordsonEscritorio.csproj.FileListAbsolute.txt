@@ -1,0 +1,12 @@
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\obj\Debug\NordsonEscritorio.csprojResolveAssemblyReference.cache
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\obj\Debug\NordsonEscritorio.Form1.resources
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\obj\Debug\NordsonEscritorio.Form2.resources
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\obj\Debug\NordsonEscritorio.Properties.Resources.resources
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\obj\Debug\NordsonEscritorio.csproj.GenerateResource.Cache
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\obj\Debug\NordsonEscritorio.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\bin\Debug\NordsonEscritorio.exe.config
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\bin\Debug\NordsonEscritorio.exe
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\bin\Debug\NordsonEscritorio.pdb
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\obj\Debug\NordsonEscritorio.exe
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\obj\Debug\NordsonEscritorio.pdb
+C:\Users\Alejandro\source\repos\NordsonEscritorio\NordsonEscritorio\obj\Debug\NordsonEscritorio.Form3.resources

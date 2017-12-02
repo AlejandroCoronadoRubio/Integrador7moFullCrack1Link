@@ -1,0 +1,9 @@
+c:\users\alejandro\source\repos\AppWeb\AppWeb\bin\AppWeb.dll.config
+c:\users\alejandro\source\repos\AppWeb\AppWeb\bin\AppWeb.dll
+c:\users\alejandro\source\repos\AppWeb\AppWeb\bin\AppWeb.pdb
+c:\users\alejandro\source\repos\AppWeb\AppWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\alejandro\source\repos\AppWeb\AppWeb\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\alejandro\source\repos\AppWeb\AppWeb\obj\Debug\AppWeb.csprojResolveAssemblyReference.cache
+c:\users\alejandro\source\repos\AppWeb\AppWeb\obj\Debug\AppWeb.csproj.CoreCompileInputs.cache
+c:\users\alejandro\source\repos\AppWeb\AppWeb\obj\Debug\AppWeb.dll
+c:\users\alejandro\source\repos\AppWeb\AppWeb\obj\Debug\AppWeb.pdb

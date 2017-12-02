@@ -1,0 +1,11 @@
+C:\Users\Alejandro\source\repos\FinalProject\FinalProject\bin\FinalProject.dll.config
+C:\Users\Alejandro\source\repos\FinalProject\FinalProject\bin\FinalProject.dll
+C:\Users\Alejandro\source\repos\FinalProject\FinalProject\bin\FinalProject.pdb
+C:\Users\Alejandro\source\repos\FinalProject\FinalProject\bin\EntityFramework.dll
+C:\Users\Alejandro\source\repos\FinalProject\FinalProject\bin\EntityFramework.SqlServer.dll
+C:\Users\Alejandro\source\repos\FinalProject\FinalProject\bin\EntityFramework.xml
+C:\Users\Alejandro\source\repos\FinalProject\FinalProject\bin\EntityFramework.SqlServer.xml
+C:\Users\Alejandro\source\repos\FinalProject\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
+C:\Users\Alejandro\source\repos\FinalProject\FinalProject\obj\Debug\FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\Alejandro\source\repos\FinalProject\FinalProject\obj\Debug\FinalProject.dll
+C:\Users\Alejandro\source\repos\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
